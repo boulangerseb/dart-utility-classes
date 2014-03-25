@@ -39,5 +39,20 @@ class GraphicsTools {
       + (c * 3 - c * 3 * pct) * t2
       + d * t3;
   }   
+
+  static Vector getVectorMorphingAtPercent(Vector originVector, Vector destinationVector, double percent) {
+    num valueX = (originVector.x*(1.0-percent)) + (destinationVector.x*percent);
+    num valueY = (originVector.y*(1.0-percent)) + (destinationVector.y*percent);
+    return new Vector(valueX,valueY);
+  }
+
+  static double deg2rad(double deg) {
+    return (PI*deg)/180;
+  }
+  
+  static double rad2deg(double rad) {
+    return (rad * 180)/PI;
+  } 
+
   
 }
